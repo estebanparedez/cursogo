@@ -16,6 +16,8 @@ func main() {
 
 	decimal32, decimal64 := getDecimal()
 
+	hola := "Hola"
+
 	fmt.Println("Hola ", name)
 
 	fmt.Printf(holaMundo, name, lastName)
@@ -25,6 +27,14 @@ func main() {
 	fmt.Println(miNumero, x, y, z)
 
 	fmt.Println(decimal32, decimal64)
+
+	fmt.Println(getUnicode())
+
+	fmt.Println(string(hola[0]))
+
+	fmt.Println(len(hola))
+
+	imprimeArray()
 }
 
 func getName() string {
@@ -49,4 +59,23 @@ func suma(a int, b int) int {
 
 func getDecimal() (float32, float64) {
 	return float32(0.1), float64(float32(0.1))
+}
+
+func getUnicode() string {
+	return "你好，世界"
+}
+
+func imprimeArray() {
+	var array1 [2]string
+	array1[0] = "Hola"
+	array1[1] = "Mundo"
+
+	array2 := [4]int{1, 2, 3, 4}
+
+	fmt.Println(array1)
+	fmt.Println(len(array1))
+
+	fmt.Println(array2)
+
+	var matriz [2][2]string
 }
