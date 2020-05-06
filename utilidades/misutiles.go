@@ -1,6 +1,9 @@
 package utilidades
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func GetName() string {
 
@@ -18,8 +21,19 @@ func GetMultiplesVariables() (int, int32, int64) {
 	return 1, 225252525, 252525252242352525
 }
 
-func Suma(a int, b int) int {
-	return a + b
+func Suma(a interface{}, b interface{}) (int, error) {
+
+	switch a.(type) {
+	case string:
+		return 0, errors.New("El valor A NO es un entero")
+	}
+
+	switch b.(type) {
+	case string:
+		return 0, errors.New("El valor B NO es un entero")
+	}
+
+	return a.(int) + b.(int), nil
 }
 
 func GetDecimal() (float32, float64) {
