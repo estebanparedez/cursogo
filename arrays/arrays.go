@@ -31,7 +31,8 @@ func ImprimeArray() {
 }
 
 // Imprime array muestra como se trabaja con Slices en Go
-func ImprimeArray() {
+
+func imprimeSlice() {
 
 	var slice1 []string
 

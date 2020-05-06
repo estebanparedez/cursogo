@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func operacionesConStrings() {
+func OperacionesConStrings() {
 
 	var texto = "Hola Go, Hola Antonio, Hola Mundo"
 
