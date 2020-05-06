@@ -14,15 +14,7 @@ func main() {
 
 	x, y, z := getMultiplesVariables()
 
-	decimal32, decimal64 := getDecimal()
-
-	hola := "Hola"
-
-	fmt.Println("Hola ", name)
-
 	fmt.Printf(holaMundo, name, lastName)
-
-	fmt.Println("")
 
 	fmt.Println(miNumero, x, y, z)
 
@@ -37,6 +29,8 @@ func main() {
 	imprimeArray()
 
 	imprimeSlice()
+
+	multiplo5()
 }
 
 func getName() string {
@@ -78,7 +72,6 @@ func imprimeArray() {
 	fmt.Println(len(array1))
 
 	fmt.Println(array2)
-
 	//
 	var matriz [2][2]string
 
@@ -94,19 +87,18 @@ func imprimeArray() {
 }
 
 func imprimeSlice() {
+
 	var slice1 []string
 
 	slice1 = append(slice1, "Hola", "Slice")
 
 	fmt.Println(slice1)
-
 	fmt.Println(len(slice1))
 
 	slice1 = append(slice1, "NuevoElemento")
+
 	fmt.Println(slice1)
 	fmt.Println(len(slice1))
-
-	// Matrices
 
 	matriz := [][]string{{"Hola", "Mundo"}, {"Curso", "Go"}}
 
@@ -121,4 +113,24 @@ func imprimeSlice() {
 	matriz2 = append(matriz2, row2)
 
 	fmt.Println(matriz2)
+}
+
+func getNumero() int {
+	var numero = 0
+
+	fmt.Println("ingresa un numero")
+	fmt.Scanf("%d", &numero)
+
+	return numero
+}
+
+func multiplo5() {
+
+	if numero := getNumero(); modulo%5 == 0 {
+		fmt.Println("Es multiplo de 5")
+	} else if numero%3 == 0 {
+		fmt.Println("Es multiplo de 3")
+	} else {
+		fmt.Println("No es multiplo de 3 ni 5")
+	}
 }
